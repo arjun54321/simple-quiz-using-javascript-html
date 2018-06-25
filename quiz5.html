@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	</head>
+<body>
+	
+	<form action="" method="" name="form">
+
+		<f1>Q1.</f1>What is the capital of INDIA?<br>
+		<input type="radio" name="mcq1" value="DELHI" id="A">DELHI<br>
+												<input type="radio" name="mcq1" value="CHENNAI" id="B">CHENNAI<br>
+												<input type="radio" name="mcq1" value="AGRA" id="C">AGRA<br>
+												<input type="radio" name="mcq1" value="GOA" id="D">GOA<br>
+												<div></div>
+		<f1>Q2.</f1><font color="blue">What is the color of this text?</font><br>
+		<input type="radio" name="mcq2" value="RED" >RED<br>
+												<input type="radio" name="mcq2" value="YELLOW">YELLOW<br>
+												<input type="radio" name="mcq2" value="GREN">GREEN<br>
+												<input type="radio" name="mcq2" value="BLUE">BLUE<br>
+												<div></div>
+		<f1>Q3.</f1>Who is thr National animal of INDIA?<br>
+		<input type="radio" name="mcq3" value="DOG">DOG<br>
+												<input type="radio" name="mcq3" value="TIGER">TIGER<br>
+												<input type="radio" name="mcq3" value="LION">LION<br>
+												<input type="radio" name="mcq3" value="PANTHER">PANTHER<br>
+												<div></div>										<div></div>					
+		<f1>Q4.</f1>National bird of INDIA is:<br>
+		<input type="radio" name="mcq4" value="PICOCK">PICOCK<br>
+												<input type="radio" name="mcq4" value="CROW">CROW<br>
+												<input type="radio" name="mcq4" value="PARROT">PARROT<br>
+												<input type="radio" name="mcq4" value="PEGION">PEGION<br>
+												<div></div>
+		<f1>Q5.</f1> 2+2 is?<br><input type="radio" name="mcq5" value="ONE">ONE<br>
+												<input type="radio" name="mcq5" value="TWO">TWO<br>
+												<input type="radio" name="mcq5" value="THREE">THREE<br>
+												<input type="radio" name="mcq5" value="FOUR">FOUR<br>
+												<div></div>		
+												
+
+		 <button type="button" onclick="result()">submit</button>
+
+</form>
+<script>
+
+	function result()
+	{
+		
+
+		var qs1=document.form.mcq1.value;
+		var qs2=document.form.mcq2.value;
+		var qs3=document.form.mcq3.value;
+		var qs4=document.form.mcq4.value;
+		var qs5=document.form.mcq5.value;
+		
+		var a = null;
+
+		var count=0;
+		
+		var none=0;
+
+		
+
+		if(qs1=="DELHI")
+		{
+			count++;
+		}
+		if(qs1=="")
+		{
+			none++;
+		}
+		
+		if(qs2=="BLUE")
+		{
+			count++;
+		}
+		if(qs2=="")
+		{
+			none++;
+		}
+		if(qs3=="LION")
+		{
+			count++;
+		}
+		if(qs3=="")
+		{
+			none++;
+		}
+		if(qs4=="PICOCK")
+		{
+			count++;
+		}
+		if(qs4=="")
+		{
+			none++;
+		}
+		if(qs5=="FOUR")
+		{
+			count++;
+		}
+		if(qs5=="")
+		{
+			none++;
+		}
+		
+		        document.write("Correct Answer = "+count);
+         		
+				document.write("<br>","non attempt = "+none);
+				
+				var x = 5-none;
+				
+				document.write("<br>","attempt = "+x);
+				
+				var y = x-count;
+				
+				document.write("<br>","wrong answer ="+y);
+				
+		
+
+	}
+</script>
+</body>
+</html>
